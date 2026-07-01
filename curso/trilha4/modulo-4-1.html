@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="inema-course" content="neurociencia-comportamento">
+<title>4.1 — A Critica ao Homo Economicus | MPC</title>
+
+<!-- Anti-FOUC -->
+<script>
+(function(){try{var h=document.documentElement,D={theme:'inema-dark',font:'inter',fontScale:100,lineWidth:68,leading:1.7,accent:'emerald'};function c(o){var r={};for(var x in o)r[x]=o[x];return r}var p=c(D);try{var raw=localStorage.getItem('inema.prefs');if(raw){var ps=JSON.parse(raw);if(ps&&typeof ps==='object')for(var k in D)if(ps[k]!=null)p[k]=ps[k]}else{var lg=localStorage.getItem('theme');if(lg==='light')p.theme='claro';else if(lg==='dark')p.theme='inema-dark'}}catch(e){p=c(D)}var T={'inema-dark':{dark:true,attr:null,cs:'dark'},'claro':{dark:false,attr:null,cs:'light'},'sepia':{dark:false,attr:'sepia',cs:'light'},'foco':{dark:null,attr:'foco',cs:null},'contraste':{dark:true,attr:'contraste',cs:'dark'}};var t=T[p.theme]||T['inema-dark'];if(t.dark===true)h.classList.add('dark');else if(t.dark===false)h.classList.remove('dark');if(t.attr)h.setAttribute('data-theme',t.attr);else h.removeAttribute('data-theme');h.style.colorScheme=(t.cs?t.cs:(h.classList.contains('dark')?'dark':'light'));h.setAttribute('data-font',p.font||'inter');h.setAttribute('data-accent',p.accent||'emerald');var s=h.style;var sc=(+p.fontScale||100);s.setProperty('--inema-font-scale',(sc/100).toString());s.setProperty('font-size',sc+'%');s.setProperty('--measure',(+p.lineWidth||68)+'ch');s.setProperty('--lh-body',(+p.leading||1.7).toString());var fam=p.font==='system'?'system-ui,-apple-system,"Segoe UI",Roboto,sans-serif':(p.font==='leitura'?'"Atkinson Hyperlegible","Inter",system-ui,sans-serif':'"Inter",system-ui,sans-serif');s.setProperty('--font-body',fam);var A={emerald:[152,76,45],blue:[217,91,60],purple:[258,90,66],amber:[38,92,50],teal:[174,72,41],rose:[350,89,60]};var a=A[p.accent]||A.emerald;s.setProperty('--accent-h',a[0]+'');s.setProperty('--accent-s',a[1]+'%');s.setProperty('--accent-l',a[2]+'%');s.setProperty('--accent','hsl('+a[0]+' '+a[1]+'% '+a[2]+'%)')}catch(err){try{document.documentElement.classList.add('dark');document.documentElement.style.colorScheme='dark'}catch(e){}}})();
+</script>
+
+<link rel="stylesheet" href="../../assets/learn.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        dark: { 600:'#4b5563', 700:'#374151', 800:'#1f2937', 900:'#111827' },
+        primary: '#FACC15'
+      }
+    }
+  }
+}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Manifesto do curso -->
+<script type="application/json" data-inema-manifest>
+{"course":"neurociencia-comportamento","tracks":[{"n":"1","title":"O Cerebro que Decide","modules":[{"id":"1-1","title":"Sistema 1 e Sistema 2","topics":6,"href":"curso/trilha1/modulo-1-1.html"},{"id":"1-2","title":"Heuristicas","topics":6,"href":"curso/trilha1/modulo-1-2.html"},{"id":"1-3","title":"Vieses cognitivos","topics":6,"href":"curso/trilha1/modulo-1-3.html"},{"id":"1-4","title":"Dissonancia cognitiva","topics":6,"href":"curso/trilha1/modulo-1-4.html"}]},{"n":"2","title":"Influencia Social","modules":[{"id":"2-1","title":"Conformidade","topics":6,"href":"curso/trilha2/modulo-2-1.html"},{"id":"2-2","title":"Obediencia","topics":6,"href":"curso/trilha2/modulo-2-2.html"},{"id":"2-3","title":"Manipulacao social","topics":6,"href":"curso/trilha2/modulo-2-3.html"}]},{"n":"3","title":"Neurociencia do Comportamento","modules":[{"id":"3-1","title":"Neuroplasticidade","topics":6,"href":"curso/trilha3/modulo-3-1.html"},{"id":"3-2","title":"Dopamina","topics":6,"href":"curso/trilha3/modulo-3-2.html"},{"id":"3-3","title":"Amigdala","topics":6,"href":"curso/trilha3/modulo-3-3.html"}]},{"n":"4","title":"Economia Comportamental","modules":[{"id":"4-1","title":"Homo Economicus","topics":6,"href":"curso/trilha4/modulo-4-1.html"},{"id":"4-2","title":"Nudge Theory","topics":6,"href":"curso/trilha4/modulo-4-2.html"},{"id":"4-3","title":"Contabilidade mental","topics":6,"href":"curso/trilha4/modulo-4-3.html"}]},{"n":"5","title":"Filosofia da Mente","modules":[{"id":"5-1","title":"Livre-arbitrio","topics":6,"href":"curso/trilha5/modulo-5-1.html"},{"id":"5-2","title":"Consciencia","topics":6,"href":"curso/trilha5/modulo-5-2.html"},{"id":"5-3","title":"Semiotica","topics":6,"href":"curso/trilha5/modulo-5-3.html"}]},{"n":"6","title":"IA, Vieses e Etica","modules":[{"id":"6-1","title":"Vieses algoritmicos","topics":6,"href":"curso/trilha6/modulo-6-1.html"},{"id":"6-2","title":"Bolhas epistemicas","topics":6,"href":"curso/trilha6/modulo-6-2.html"},{"id":"6-3","title":"Etica e espaco humano","topics":6,"href":"curso/trilha6/modulo-6-3.html"}]}]}
+</script>
+
+<style>
+body{font-family:'Inter',system-ui,sans-serif}.topic-explanation{display:none}.topic-explanation.active{display:block}
+html:not(.dark) body{background-color:#f8fafc}html:not(.dark) .bg-dark-900{background-color:#fff}html:not(.dark) .bg-dark-800{background-color:#f9fafb}html:not(.dark) .bg-dark-700{background-color:#f3f4f6}html:not(.dark) .bg-dark-600{background-color:#e5e7eb}html:not(.dark) .text-neutral-100{color:#111827}html:not(.dark) .text-neutral-300{color:#4b5563}html:not(.dark) .text-neutral-400{color:#6b7280}html:not(.dark) .text-neutral-500{color:#9ca3af}html:not(.dark) .border-dark-600{border-color:#d1d5db}html:not(.dark) .border-dark-700{border-color:#e5e7eb}
+html:not(.dark) .text-amber-400{color:#92400e}html:not(.dark) .bg-amber-500\/20{background-color:rgba(217,119,6,0.12)}html:not(.dark) .border-amber-500\/30{border-color:rgba(217,119,6,0.25)}html:not(.dark) .hover\:bg-amber-500\/10:hover{background-color:rgba(217,119,6,0.08)}
+html:not(.dark) [class*="bg-gradient-to"]{background-image:none!important}html:not(.dark) .text-primary{color:#a16207}html:not(.dark) .text-sky-400{color:#0369a1}html:not(.dark) .hover\:text-sky-300:hover{color:#0284c7}html:not(.dark) .bg-dark-900\/95{background-color:rgba(255,255,255,0.95)}
+.dark .border-dark-600{border-color:#374151}.dark .divide-dark-600>:not([hidden])~:not([hidden]){border-color:#374151}
+html:not(.dark) svg[role="img"]{filter:saturate(.82) brightness(.96)}
+</style>
+</head>
+<body class="bg-dark-900 text-neutral-100 min-h-screen" data-inema-module="4-1">
+
+<!-- NAV -->
+<nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur border-b border-dark-700">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <div class="flex items-center space-x-4">
+        <a href="../../index.html" class="text-primary font-bold text-xl">🧠 MPC</a>
+        <span class="text-neutral-500">|</span>
+        <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">INEMA.CLUB</a>
+      </div>
+      <div class="hidden md:flex items-center space-x-1">
+        <a href="../trilha1/index.html" class="px-3 py-2 rounded-lg text-sm font-medium text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors">T1 Cerebro</a>
+        <a href="../trilha2/index.html" class="px-3 py-2 rounded-lg text-sm font-medium text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors">T2 Social</a>
+        <a href="../trilha3/index.html" class="px-3 py-2 rounded-lg text-sm font-medium text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors">T3 Neuro</a>
+        <a href="../trilha4/index.html" class="px-3 py-2 rounded-lg text-sm font-medium text-amber-400 bg-amber-500/10">T4 Economia</a>
+        <a href="../trilha5/index.html" class="px-3 py-2 rounded-lg text-sm font-medium text-neutral-400 hover:text-teal-400 hover:bg-teal-500/10 transition-colors">T5 Filosofia</a>
+        <a href="../trilha6/index.html" class="px-3 py-2 rounded-lg text-sm font-medium text-neutral-400 hover:text-rose-400 hover:bg-rose-500/10 transition-colors">T6 IA+Etica</a>
+        <button onclick="toggleTheme()" class="ml-4 p-2 rounded-lg hover:bg-dark-700 transition-colors"><span class="dark:hidden">🌙</span><span class="hidden dark:inline">☀️</span></button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+  <!-- BREADCRUMB -->
+  <div class="flex items-center space-x-2 text-sm text-neutral-500 mb-8">
+    <a href="../../index.html" class="hover:text-amber-400 transition-colors">Curso</a>
+    <span>/</span>
+    <a href="index.html" class="hover:text-amber-400 transition-colors">Trilha 4</a>
+    <span>/</span>
+    <span class="text-amber-400">Modulo 4.1</span>
+  </div>
+
+  <!-- HEADER -->
+  <section class="mb-10">
+    <div class="bg-gradient-to-r from-amber-900/30 via-dark-800 to-dark-800 rounded-2xl p-8 border border-amber-500/30">
+      <div class="inline-flex items-center space-x-2 bg-amber-500/20 border border-amber-500/30 rounded-full px-4 py-1.5 mb-4">
+        <span class="text-amber-400 text-sm font-semibold">MODULO 4.1</span>
+      </div>
+      <h1 class="text-3xl md:text-4xl font-extrabold mb-3 leading-tight">A Critica ao Homo Economicus</h1>
+      <p class="text-neutral-300 text-lg max-w-3xl">Como Thaler e Ariely destruiram o mito do agente racional perfeito e revelaram a irracionalidade previsivel que governa nossas decisoes economicas.</p>
+    </div>
+  </section>
+
+  <!-- SVG: Homo Economicus vs Agente Real -->
+  <div class="rounded-2xl border border-amber-500/30 bg-dark-900/40 p-3 sm:p-4 mb-10 overflow-hidden">
+    <svg id="m41-hero" viewBox="0 0 800 260" role="img" aria-label="Comparacao entre Homo Economicus (modelo teorico) e o Agente Real (como humanos realmente decidem)" class="w-full h-auto">
+      <defs>
+        <filter id="m41-glow"><feGaussianBlur stdDeviation="1.5" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+        <pattern id="m41-grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="#374151" stroke-width="0.5" opacity="0.3"/></pattern>
+        <marker id="m41-arr" viewBox="0 0 10 7" refX="10" refY="3.5" markerWidth="8" markerHeight="6" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#fbbf24" opacity="0.7"/></marker>
+      </defs>
+      <rect width="800" height="260" fill="url(#m41-grid)" rx="12"/>
+
+      <!-- Homo Economicus (esquerda, riscado) -->
+      <rect x="40" y="40" width="200" height="180" rx="16" fill="#1f1604" stroke="#fbbf24" stroke-width="2" stroke-dasharray="6,3" opacity="0.5"/>
+      <text x="140" y="70" text-anchor="middle" fill="#fbbf24" font-family="Inter,sans-serif" font-size="14" font-weight="700" opacity="0.6">HOMO ECONOMICUS</text>
+      <text x="60" y="100" fill="#fde68a" font-family="Inter,sans-serif" font-size="10" opacity="0.5">&#10005; Racional perfeito</text>
+      <text x="60" y="120" fill="#fde68a" font-family="Inter,sans-serif" font-size="10" opacity="0.5">&#10005; Preferencias estaveis</text>
+      <text x="60" y="140" fill="#fde68a" font-family="Inter,sans-serif" font-size="10" opacity="0.5">&#10005; Maximiza utilidade</text>
+      <text x="60" y="160" fill="#fde68a" font-family="Inter,sans-serif" font-size="10" opacity="0.5">&#10005; Informacao completa</text>
+      <text x="60" y="180" fill="#fde68a" font-family="Inter,sans-serif" font-size="10" opacity="0.5">&#10005; Autocontrole total</text>
+      <text x="60" y="200" fill="#fde68a" font-family="Inter,sans-serif" font-size="10" opacity="0.5">&#10005; Sem emocoes</text>
+      <!-- X grande -->
+      <line x1="50" y1="50" x2="230" y2="210" stroke="#f87171" stroke-width="3" opacity="0.5"/>
+      <line x1="230" y1="50" x2="50" y2="210" stroke="#f87171" stroke-width="3" opacity="0.5"/>
+
+      <!-- Seta central -->
+      <text x="360" y="100" text-anchor="middle" fill="#fde68a" font-family="Inter,sans-serif" font-size="10" font-weight="600">Thaler (2017)</text>
+      <text x="360" y="118" text-anchor="middle" fill="#fde68a" font-family="Inter,sans-serif" font-size="10" font-weight="600">Ariely (2008)</text>
+      <path d="M 280 130 L 440 130" stroke="#fbbf24" stroke-width="2.5" opacity="0.6" marker-end="url(#m41-arr)"/>
+      <text x="360" y="152" text-anchor="middle" fill="#f87171" font-family="Inter,sans-serif" font-size="9">decadas de evidencia</text>
+
+      <!-- Agente Real (direita) -->
+      <rect x="460" y="40" width="300" height="180" rx="16" fill="#1f1604" stroke="#f59e0b" stroke-width="2" filter="url(#m41-glow)"/>
+      <text x="610" y="70" text-anchor="middle" fill="#fbbf24" font-family="Inter,sans-serif" font-size="14" font-weight="700">AGENTE REAL (HUMANS)</text>
+      <text x="480" y="100" fill="#38bdf8" font-family="Inter,sans-serif" font-size="10">&#10003; Irracional previsivel</text>
+      <text x="480" y="120" fill="#38bdf8" font-family="Inter,sans-serif" font-size="10">&#10003; Efeito dotacao</text>
+      <text x="480" y="140" fill="#38bdf8" font-family="Inter,sans-serif" font-size="10">&#10003; Afetado por framing</text>
+      <text x="480" y="160" fill="#38bdf8" font-family="Inter,sans-serif" font-size="10">&#10003; Normas sociais &gt; utilidade</text>
+      <text x="480" y="180" fill="#38bdf8" font-family="Inter,sans-serif" font-size="10">&#10003; Autocontrole limitado</text>
+      <text x="480" y="200" fill="#38bdf8" font-family="Inter,sans-serif" font-size="10">&#10003; Emocoes dominam</text>
+    </svg>
+  </div>
+
+  <!-- TOPICO 1 -->
+  <section class="mb-10" data-inema-topic="modulo-4-1#topico-1">
+    <div class="flex items-center space-x-3 mb-4">
+      <span class="w-9 h-9 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
+      <h2 class="text-xl font-bold">O modelo do Homo Economicus</h2>
+    </div>
+
+    <p class="text-neutral-300 mb-4">Durante mais de um seculo, a teoria economica dominante tratou os seres humanos como maquinas de calcular perfeitas. O Homo Economicus era o modelo: um agente com preferencias estaveis e transitivas, que processa toda a informacao disponivel, calcula a utilidade esperada de cada opcao e escolhe a que maximiza seu beneficio.</p>
+
+    <p class="text-neutral-300 mb-4">Esse modelo era matematicamente elegante. Permitia equacoes, graficos e previsoes. Tinha um problema: nao descrevia nenhum ser humano real.</p>
+
+    <!-- Grid comparativo -->
+    <div class="grid md:grid-cols-2 gap-4 mb-6">
+      <div class="bg-dark-800 border border-dark-700 rounded-xl p-5">
+        <h4 class="text-sm font-semibold text-amber-400 mb-3">&#10003; O que o modelo assumia</h4>
+        <ul class="space-y-2 text-neutral-300 text-sm">
+          <li class="flex items-start space-x-2"><span class="text-amber-400 mt-0.5">&#8226;</span><span>Racionalidade perfeita em toda decisao</span></li>
+          <li class="flex items-start space-x-2"><span class="text-amber-400 mt-0.5">&#8226;</span><span>Preferencias que nao mudam com o contexto</span></li>
+          <li class="flex items-start space-x-2"><span class="text-amber-400 mt-0.5">&#8226;</span><span>Acesso completo a toda informacao relevante</span></li>
+          <li class="flex items-start space-x-2"><span class="text-amber-400 mt-0.5">&#8226;</span><span>Capacidade de processar infinitas opcoes</span></li>
+        </ul>
+      </div>
+      <div class="bg-dark-800 border border-dark-700 rounded-xl p-5">
+        <h4 class="text-sm font-semibold text-red-400 mb-3">&#10005; O que a realidade mostra</h4>
+        <ul class="space-y-2 text-neutral-300 text-sm">
+          <li class="flex items-start space-x-2"><span class="text-red-400 mt-0.5">&#8226;</span><span>Decisoes contaminadas por emocoes e contexto</span></li>
+          <li class="flex items-start space-x-2"><span class="text-red-400 mt-0.5">&#8226;</span><span>Preferencias que mudam conforme a apresentacao</span></li>
+          <li class="flex items-start space-x-2"><span class="text-red-400 mt-0.5">&#8226;</span><span>Informacao limitada e enviesada</span></li>
+          <li class="flex items-start space-x-2"><span class="text-red-400 mt-0.5">&#8226;</span><span>Paralisia diante de muitas opcoes</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Conceitos-chave mini-cards -->
+    <div class="flex flex-wrap gap-2 mb-4">
+      <span class="bg-amber-500/20 text-amber-400 text-xs font-medium px-3 py-1 rounded-full">Racionalidade perfeita</span>
+      <span class="bg-amber-500/20 text-amber-400 text-xs font-medium px-3 py-1 rounded-full">Utilidade esperada</span>
+      <span class="bg-amber-500/20 text-amber-400 text-xs font-medium px-3 py-1 rounded-full">Preferencias transitivas</span>
+      <span class="bg-amber-500/20 text-amber-400 text-xs font-medium px-3 py-1 rounded-full">Maximizacao</span>
+    </div>
+
+    <!-- Tip box -->
+    <div class="bg-amber-500/10 border border-amber-500/20 rounded-xl p-4">
+      <p class="text-sm text-neutral-300"><span class="text-amber-400 font-semibold">Conexao com T1:</span> O Homo Economicus e essencialmente um "ser de puro Sistema 2" (Kahneman). Nunca usa atalhos, nunca erra, nunca se cansa. Esse ser nao existe.</p>
+    </div>
+  </section>
+
+  <!-- TOPICO 2 -->
+  <section class="mb-10" data-inema-topic="modulo-4-1#topico-2">
+    <div class="flex items-center space-x-3 mb-4">
+      <span class="w-9 h-9 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
+      <h2 class="text-xl font-bold">O efeito dotacao (endowment effect)</h2>
+    </div>
+
+    <p class="text-neutral-300 mb-4">Richard Thaler descobriu algo que a economia classica dizia ser impossivel: o simples fato de possuir algo muda o valor que atribuimos a esse objeto. Uma caneca que voce ganhou ha 5 minutos ja "vale" mais para voce do que para quem nao a tem.</p>
+
+    <p class="text-neutral-300 mb-4">No experimento classico, participantes que receberam canecas pediam em media $7.12 para vende-las (WTA, willingness to accept). Quem nao tinha a caneca oferecia em media $2.87 para compra-la (WTP, willingness to pay). O mesmo objeto, o dobro do valor, dependendo apenas de quem "possui".</p>
+
+    <!-- Data box -->
+    <div class="bg-dark-800 border border-dark-700 rounded-xl p-5 mb-6">
+      <h4 class="text-sm font-semibold text-amber-400 mb-3">Experimento da caneca (Kahneman, Knetsch & Thaler, 1990)</h4>
+      <div class="grid grid-cols-2 gap-4">
+        <div class="text-center">
+          <span class="text-2xl font-bold text-amber-400">$7.12</span>
+          <p class="text-neutral-400 text-sm mt-1">WTA (preço para vender)</p>
+          <p class="text-neutral-500 text-xs">quem ja tem a caneca</p>
+        </div>
+        <div class="text-center">
+          <span class="text-2xl font-bold text-sky-400">$2.87</span>
+          <p class="text-neutral-400 text-sm mt-1">WTP (preco para comprar)</p>
+          <p class="text-neutral-500 text-xs">quem nao tem a caneca</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="text-neutral-300 mb-4">Por que isso importa? Porque para a economia classica, WTA e WTP deveriam ser iguais. Possuir ou nao nao deveria mudar o valor objetivo de um bem. Mas o cerebro nao funciona com valores objetivos: ele funciona com perdas e ganhos relativos a um ponto de referencia.</p>
+
+    <div class="flex flex-wrap gap-2 mb-4">
+      <span class="bg-amber-500/20 text-amber-400 text-xs font-medium px-3 py-1 rounded-full">Efeito dotacao</span>
+      <span class="bg-amber-500/20 text-amber-400 text-xs font-medium px-3 py-1 rounded-full">Aversao a perda</span>
+      <span class="bg-amber-500/20 text-amber-400 text-xs font-medium px-3 py-1 rounded-full">Status quo bias</span>
+      <span class="bg-amber-500/20 text-amber-400 text-xs font-medium px-3 py-1 rounded-full">WTA vs WTP</span>
+    </div>
+
+    <!-- Alert box -->
+    <div class="bg-red-500/10 border border-red-500/20 rounded-xl p-4">
+      <p class="text-sm text-neutral-300"><span class="text-red-400 font-semibold">Implicacao pratica:</span> Investidores seguram acoes perdedoras por causa do efeito dotacao. "Ja e minha, nao posso vender por menos do que paguei." A perda e cognitiva, nao financeira.</p>
+    </div>
+  </section>
+
+  <!-- TOPICO 3 -->
+  <section class="mb-10" data-inema-topic="modulo-4-1#topico-3">
+    <div class="flex items-center space-x-3 mb-4">
+      <span class="w-9 h-9 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
+      <h2 class="text-xl font-bold">Enquadramento e framing</h2>
+    </div>
+
+    <p class="text-neutral-300 mb-4">Se os humanos fossem racionais, a forma como uma opcao e apresentada nao deveria afetar a decisao. Mas afeta. Profundamente. Thaler e Kahneman demonstraram que o enquadramento (framing) altera escolhas mesmo quando as opcoes sao logicamente identicas.</p>
+
+    <!-- SVG: Framing positivo vs negativo -->
+    <div class="rounded-xl border border-dark-700 bg-dark-900/40 p-3 mb-6 overflow-hidden">
+      <svg id="m41-framing" viewBox="0 0 700 180" role="img" aria-label="O mesmo dado enquadrado de formas diferentes gera decisoes opostas" class="w-full h-auto">
+        <defs>
+          <pattern id="m41-g2" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="#374151" stroke-width="0.5" opacity="0.3"/></pattern>
+        </defs>
+        <rect width="700" height="180" fill="url(#m41-g2)" rx="10"/>
+
+        <!-- Dado central -->
+        <rect x="250" y="20" width="200" height="50" rx="10" fill="#1f2937" stroke="#6b7280" stroke-width="1.5"/>
+        <text x="350" y="42" text-anchor="middle" fill="#d1d5db" font-family="Inter,sans-serif" font-size="11" font-weight="600">MESMO DADO OBJETIVO</text>
+        <text x="350" y="58" text-anchor="middle" fill="#9ca3af" font-family="Inter,sans-serif" font-size="10">600 pacientes, tratamento X</text>
+
+        <!-- Frame positivo -->
+        <rect x="40" y="95" width="250" height="65" rx="12" fill="#1f1604" stroke="#fbbf24" stroke-width="2"/>
+        <text x="165" y="116" text-anchor="middle" fill="#fbbf24" font-family="Inter,sans-serif" font-size="11" font-weight="700">FRAME POSITIVO</text>
+        <text x="165" y="134" text-anchor="middle" fill="#fde68a" font-family="Inter,sans-serif" font-size="10">"200 pessoas serao salvas"</text>
+        <text x="165" y="150" text-anchor="middle" fill="#34d399" font-family="Inter,sans-serif" font-size="10" font-weight="600">72% escolhem este</text>
+
+        <!-- Frame negativo -->
+        <rect x="410" y="95" width="250" height="65" rx="12" fill="#0e1b26" stroke="#38bdf8" stroke-width="2"/>
+        <text x="535" y="116" text-anchor="middle" fill="#38bdf8" font-family="Inter,sans-serif" font-size="11" font-weight="700">FRAME NEGATIVO</text>
+        <text x="535" y="134" text-anchor="middle" fill="#7dd3fc" font-family="Inter,sans-serif" font-size="10">"400 pessoas vao morrer"</text>
+        <text x="535" y="150" text-anchor="middle" fill="#f87171" font-family="Inter,sans-serif" font-size="10" font-weight="600">78% rejeitam este</text>
+
+        <!-- Setas -->
+        <line x1="300" y1="70" x2="200" y2="95" stroke="#fbbf24" stroke-width="1.5" opacity="0.5"/>
+        <line x1="400" y1="70" x2="500" y2="95" stroke="#38bdf8" stroke-width="1.5" opacity="0.5"/>
+      </svg>
+    </div>
+
+    <p class="text-neutral-300 mb-4">"90% de taxa de sobrevivencia" e "10% de taxa de mortalidade" sao matematicamente identicos. Mas pacientes, medicos e jurados reagem de forma radicalmente diferente a cada enquadramento. Quem controla o frame, controla a decisao.</p>
+
+    <!-- Grid comparativo -->
+    <div class="grid md:grid-cols-2 gap-4 mb-6">
+      <div class="bg-dark-800 border border-dark-700 rounded-xl p-5">
+        <h4 class="text-sm font-semibold text-amber-400 mb-3">&#10003; Framing funciona em</h4>
+        <ul class="space-y-2 text-neutral-300 text-sm">
+          <li class="flex items-start space-x-2"><span class="text-amber-400 mt-0.5">&#8226;</span><span>Decisoes medicas (cirurgia vs medicamento)</span></li>
+          <li class="flex items-start space-x-2"><span class="text-amber-400 mt-0.5">&#8226;</span><span>Precos (desconto vs sobretaxa)</span></li>
+          <li class="flex items-start space-x-2"><span class="text-amber-400 mt-0.5">&#8226;</span><span>Politica publica (emprego vs desemprego)</span></li>
+          <li class="flex items-start space-x-2"><span class="text-amber-400 mt-0.5">&#8226;</span><span>Negociacoes (ganho mutuo vs concessao)</span></li>
+        </ul>
+      </div>
+      <div class="bg-dark-800 border border-dark-700 rounded-xl p-5">
+        <h4 class="text-sm font-semibold text-red-400 mb-3">&#10005; O que o Homo Economicus diria</h4>
+        <ul class="space-y-2 text-neutral-300 text-sm">
+          <li class="flex items-start space-x-2"><span class="text-red-400 mt-0.5">&#8226;</span><span>"Irrelevante, sao os mesmos dados"</span></li>
+          <li class="flex items-start space-x-2"><span class="text-red-400 mt-0.5">&#8226;</span><span>"A forma nao deveria afetar o conteudo"</span></li>
+          <li class="flex items-start space-x-2"><span class="text-red-400 mt-0.5">&#8226;</span><span>"Preferencias nao mudam com palavras"</span></li>
+          <li class="flex items-start space-x-2"><span class="text-red-400 mt-0.5">&#8226;</span><span>"Isso viola a invariancia descritiva"</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="flex flex-wrap gap-2">
+      <span class="bg-amber-500/20 text-amber-400 text-xs font-medium px-3 py-1 rounded-full">Framing effect</span>
+      <span class="bg-amber-500/20 text-amber-400 text-xs font-medium px-3 py-1 rounded-full">Prospect Theory</span>
+      <span class="bg-amber-500/20 text-amber-400 text-xs font-medium px-3 py-1 rounded-full">Ganhos vs perdas</span>
+      <span class="bg-amber-500/20 text-amber-400 text-xs font-medium px-3 py-1 rounded-full">Invariancia descritiva</span>
+    </div>
+  </section>
+
+  <!-- TOPICO 4 -->
+  <section class="mb-10" data-inema-topic="modulo-4-1#topico-4">
+    <div class="flex items-center space-x-3 mb-4">
+      <span class="w-9 h-9 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
+      <h2 class="text-xl font-bold">Autocontrole limitado e desconto temporal</h2>
+    </div>
+
+    <p class="text-neutral-300 mb-4">Thaler observou que humanos consistentemente prometem para o futuro o que nao conseguem cumprir no presente. Voce se compromete a começar a dieta na segunda, a poupar no proximo mes, a estudar nas ferias. O eu-futuro e heroico. O eu-presente quer sorvete.</p>
+
+    <!-- Timeline -->
+    <div class="bg-dark-800 border border-dark-700 rounded-xl p-5 mb-6">
+      <h4 class="text-sm font-semibold text-amber-400 mb-4">A batalha temporal do autocontrole</h4>
+      <div class="space-y-4">
+        <div class="flex items-start space-x-4">
+          <div class="w-10 h-10 rounded-full bg-amber-500/20 text-amber-400 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">JAN</div>
+          <div><p class="text-neutral-300 text-sm font-semibold">Promessa (eu-futuro)</p><p class="text-neutral-400 text-sm">"A partir de fevereiro, vou poupar 20% do salario."</p></div>
+        </div>
+        <div class="flex items-start space-x-4">
+          <div class="w-10 h-10 rounded-full bg-amber-500/20 text-amber-400 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">FEV</div>
+          <div><p class="text-neutral-300 text-sm font-semibold">Realidade (eu-presente)</p><p class="text-neutral-400 text-sm">"Esse mes tem carnaval, comeco em marco."</p></div>
+        </div>
+        <div class="flex items-start space-x-4">
+          <div class="w-10 h-10 rounded-full bg-red-500/20 text-red-400 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">DEZ</div>
+          <div><p class="text-neutral-300 text-sm font-semibold">Resultado</p><p class="text-neutral-400 text-sm">Poupanca: R$0. Promessa renovada para o ano que vem.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <p class="text-neutral-300 mb-4">Isso acontece por causa do <strong class="text-amber-400">desconto hiperbolico</strong>: o cerebro desconta o valor de recompensas futuras de forma desproporcional. R$100 agora vale mais que R$110 amanha, mas R$100 em 30 dias e R$110 em 31 dias parecem equivalentes. A distancia temporal distorce a percepcao de valor.</p>
+
+    <div class="bg-amber-500/10 border border-amber-500/20 rounded-xl p-4 mb-4">
+      <p class="text-sm text-neutral-300"><span class="text-amber-400 font-semibold">Thaler chamou isso de "planner vs doer":</span> o planejador (prefrontal) faz metas; o fazedor (limbico) opera no presente. O fazedor quase sempre vence.</p>
+    </div>
+
+    <div class="flex flex-wrap gap-2">
+      <span class="bg-amber-500/20 text-amber-400 text-xs font-medium px-3 py-1 rounded-full">Desconto hiperbolico</span>
+      <span class="bg-amber-500/20 text-amber-400 text-xs font-medium px-3 py-1 rounded-full">Present bias</span>
+      <span class="bg-amber-500/20 text-amber-400 text-xs font-medium px-3 py-1 rounded-full">Planner vs doer</span>
+      <span class="bg-amber-500/20 text-amber-400 text-xs font-medium px-3 py-1 rounded-full">Pre-compromisso</span>
+    </div>
+  </section>
+
+  <!-- TOPICO 5 -->
+  <section class="mb-10" data-inema-topic="modulo-4-1#topico-5">
+    <div class="flex items-center space-x-3 mb-4">
+      <span class="w-9 h-9 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
+      <h2 class="text-xl font-bold">Previsivelmente Irracional: Dan Ariely</h2>
+    </div>
+
+    <p class="text-neutral-300 mb-4">Dan Ariely, em "Previsivelmente Irracional" (2008), levou a critica um passo adiante: os erros humanos nao sao apenas reais, eles sao <strong class="text-amber-400">sistematicamente previsiveis</strong>. Nao sao ruido aleatorio. Sao padroes que podem ser mapeados, estudados e explorados (ou mitigados).</p>
+
+    <!-- Experiment box -->
+    <div class="bg-dark-800 border border-amber-500/30 rounded-xl p-5 mb-6">
+      <h4 class="text-sm font-semibold text-amber-400 mb-3">O experimento da Economist (Ariely, 2008)</h4>
+      <p class="text-neutral-300 text-sm mb-4">Ariely pediu a estudantes do MIT para escolher entre assinaturas da revista The Economist:</p>
+
+      <div class="space-y-3 mb-4">
+        <div class="flex items-center justify-between bg-dark-700/50 rounded-lg p-3">
+          <div class="flex items-center space-x-3">
+            <span class="w-7 h-7 rounded-full bg-sky-500/20 text-sky-400 text-xs font-bold flex items-center justify-center flex-shrink-0">A</span>
+            <span class="text-neutral-300 text-sm">Digital</span>
+          </div>
+          <span class="text-sky-400 font-semibold text-sm">R$59</span>
+        </div>
+        <div class="flex items-center justify-between bg-dark-700/50 rounded-lg p-3 border border-red-500/20">
+          <div class="flex items-center space-x-3">
+            <span class="w-7 h-7 rounded-full bg-red-500/20 text-red-400 text-xs font-bold flex items-center justify-center flex-shrink-0">B</span>
+            <span class="text-neutral-300 text-sm">Impressa</span>
+          </div>
+          <span class="text-red-400 font-semibold text-sm">R$125</span>
+        </div>
+        <div class="flex items-center justify-between bg-dark-700/50 rounded-lg p-3 border border-amber-500/20">
+          <div class="flex items-center space-x-3">
+            <span class="w-7 h-7 rounded-full bg-amber-500/20 text-amber-400 text-xs font-bold flex items-center justify-center flex-shrink-0">C</span>
+            <span class="text-neutral-300 text-sm">Digital + Impressa</span>
+          </div>
+          <span class="text-amber-400 font-semibold text-sm">R$125</span>
+        </div>
+      </div>
+
+      <p class="text-neutral-300 text-sm">A opcao B (impressa a R$125) parece absurda: por que alguem pagaria o mesmo preco so pela impressa? Mas e exatamente esse o ponto. A opcao B serve como <strong class="text-amber-400">isca (decoy)</strong>: faz a opcao C parecer irresistivel. Sem a opcao B, a maioria escolhia A. Com B presente, a maioria migrava para C.</p>
+    </div>
+
+    <div class="bg-amber-500/10 border border-amber-500/20 rounded-xl p-4 mb-4">
+      <p class="text-sm text-neutral-300"><span class="text-amber-400 font-semibold">A licao de Ariely:</span> nao decidimos em termos absolutos. Decidimos por comparacao. Quem adiciona um comparador pior manipula a escolha.</p>
+    </div>
+
+    <div class="flex flex-wrap gap-2">
+      <span class="bg-amber-500/20 text-amber-400 text-xs font-medium px-3 py-1 rounded-full">Irracionalidade previsivel</span>
+      <span class="bg-amber-500/20 text-amber-400 text-xs font-medium px-3 py-1 rounded-full">Efeito isca (decoy)</span>
+      <span class="bg-amber-500/20 text-amber-400 text-xs font-medium px-3 py-1 rounded-full">Ancoragem de preco</span>
+      <span class="bg-amber-500/20 text-amber-400 text-xs font-medium px-3 py-1 rounded-full">Decisao por comparacao</span>
+    </div>
+  </section>
+
+  <!-- TOPICO 6 -->
+  <section class="mb-10" data-inema-topic="modulo-4-1#topico-6">
+    <div class="flex items-center space-x-3 mb-4">
+      <span class="w-9 h-9 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
+      <h2 class="text-xl font-bold">Richard Thaler: Nobel 2017 e legado</h2>
+    </div>
+
+    <p class="text-neutral-300 mb-4">Em 2017, Richard Thaler recebeu o Premio Nobel de Economia "por suas contribuicoes a economia comportamental". Foi o reconhecimento formal de que a economia precisava de humanos reais, nao de robos racionais, em seus modelos.</p>
+
+    <!-- Timeline historica -->
+    <div class="bg-dark-800 border border-dark-700 rounded-xl p-5 mb-6">
+      <h4 class="text-sm font-semibold text-amber-400 mb-4">A historia da queda do Homo Economicus</h4>
+      <div class="space-y-4">
+        <div class="flex items-start space-x-4">
+          <div class="w-16 h-8 rounded bg-amber-500/20 text-amber-400 text-xs font-bold flex items-center justify-center flex-shrink-0">1979</div>
+          <div><p class="text-neutral-300 text-sm"><strong>Kahneman & Tversky:</strong> Prospect Theory. Humanos pesam perdas ~2x mais que ganhos.</p></div>
+        </div>
+        <div class="flex items-start space-x-4">
+          <div class="w-16 h-8 rounded bg-amber-500/20 text-amber-400 text-xs font-bold flex items-center justify-center flex-shrink-0">1980</div>
+          <div><p class="text-neutral-300 text-sm"><strong>Thaler:</strong> publica "Toward a Positive Theory of Consumer Choice". Heresia academica na epoca.</p></div>
+        </div>
+        <div class="flex items-start space-x-4">
+          <div class="w-16 h-8 rounded bg-amber-500/20 text-amber-400 text-xs font-bold flex items-center justify-center flex-shrink-0">2002</div>
+          <div><p class="text-neutral-300 text-sm"><strong>Kahneman</strong> recebe o Nobel de Economia (sendo psicologo). Primeiro sinal de mudanca.</p></div>
+        </div>
+        <div class="flex items-start space-x-4">
+          <div class="w-16 h-8 rounded bg-amber-500/20 text-amber-400 text-xs font-bold flex items-center justify-center flex-shrink-0">2008</div>
+          <div><p class="text-neutral-300 text-sm"><strong>Thaler & Sunstein:</strong> "Nudge". <strong>Ariely:</strong> "Previsivelmente Irracional". Economia comportamental chega ao publico.</p></div>
+        </div>
+        <div class="flex items-start space-x-4">
+          <div class="w-16 h-8 rounded bg-amber-500/20 text-amber-400 text-xs font-bold flex items-center justify-center flex-shrink-0">2010</div>
+          <div><p class="text-neutral-300 text-sm"><strong>UK BIT:</strong> primeiro Nudge Unit governamental. Politica publica baseada em evidencia comportamental.</p></div>
+        </div>
+        <div class="flex items-start space-x-4">
+          <div class="w-16 h-8 rounded bg-amber-500/20 text-amber-400 text-xs font-bold flex items-center justify-center flex-shrink-0">2017</div>
+          <div><p class="text-neutral-300 text-sm"><strong>Thaler:</strong> Nobel de Economia. "Econs vs Humans" vira paradigma.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <p class="text-neutral-300 mb-4">Thaler distinguiu dois tipos de agentes em seus modelos: <strong class="text-amber-400">Econs</strong> (os agentes racionais da teoria classica) e <strong class="text-amber-400">Humans</strong> (como as pessoas realmente se comportam). Seu livro "Misbehaving" (2015) documenta como a profissao economica resistiu por decadas a admitir que os Humans nao se comportam como Econs.</p>
+
+    <div class="flex flex-wrap gap-2">
+      <span class="bg-amber-500/20 text-amber-400 text-xs font-medium px-3 py-1 rounded-full">Behavioral economics</span>
+      <span class="bg-amber-500/20 text-amber-400 text-xs font-medium px-3 py-1 rounded-full">Econs vs Humans</span>
+      <span class="bg-amber-500/20 text-amber-400 text-xs font-medium px-3 py-1 rounded-full">Paternalismo libertario</span>
+      <span class="bg-amber-500/20 text-amber-400 text-xs font-medium px-3 py-1 rounded-full">Misbehaving</span>
+    </div>
+  </section>
+
+  <!-- RESUMO -->
+  <section class="mb-10">
+    <div class="bg-dark-800 border border-amber-500/30 rounded-xl p-6">
+      <h3 class="text-lg font-bold text-amber-400 mb-4">Resumo do Modulo 4.1</h3>
+      <ul class="space-y-2 text-neutral-300 text-sm">
+        <li class="flex items-start space-x-2"><span class="text-amber-400 mt-0.5">&#10003;</span><span>O Homo Economicus nunca existiu. Humanos nao sao racionais, nao tem preferencias estaveis e nao maximizam utilidade.</span></li>
+        <li class="flex items-start space-x-2"><span class="text-amber-400 mt-0.5">&#10003;</span><span>Efeito dotacao: possuir algo muda seu valor percebido. Aversao a perda supera atração por ganhos.</span></li>
+        <li class="flex items-start space-x-2"><span class="text-amber-400 mt-0.5">&#10003;</span><span>Framing: a mesma informacao, apresentada de formas diferentes, gera decisoes opostas.</span></li>
+        <li class="flex items-start space-x-2"><span class="text-amber-400 mt-0.5">&#10003;</span><span>Autocontrole: o eu-presente vence o eu-futuro. Desconto hiperbolico distorce valor temporal.</span></li>
+        <li class="flex items-start space-x-2"><span class="text-amber-400 mt-0.5">&#10003;</span><span>Ariely: irracionalidade e previsivel. Iscas e comparacoes manipulam escolhas sistematicamente.</span></li>
+        <li class="flex items-start space-x-2"><span class="text-amber-400 mt-0.5">&#10003;</span><span>Thaler (Nobel 2017): legitimou a economia comportamental como campo central da disciplina.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- NAVEGACAO -->
+  <div class="flex items-center justify-between pt-8 border-t border-dark-700">
+    <a href="index.html" class="text-neutral-400 hover:text-amber-400 transition-colors text-sm font-medium">&larr; Trilha 4</a>
+    <a href="modulo-4-2.html" class="text-amber-400 hover:text-amber-300 transition-colors text-sm font-medium">4.2 Nudge Theory &rarr;</a>
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="border-t border-dark-700 py-8"><div class="max-w-7xl mx-auto px-4 text-center text-sm text-neutral-500"><a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300">INEMA.CLUB</a> · Mente, Poder e Maquina · 2026</div></footer>
+
+<script>
+function toggleTheme(){var h=document.documentElement;h.classList.toggle('dark');var d=h.classList.contains('dark');localStorage.setItem('theme',d?'dark':'light');h.style.colorScheme=d?'dark':'light';try{var p=JSON.parse(localStorage.getItem('inema.prefs')||'{}');p.theme=d?'inema-dark':'claro';localStorage.setItem('inema.prefs',JSON.stringify(p))}catch(e){}}
+function toggleTopic(btn){var exp=btn.nextElementSibling;exp.classList.toggle('active');btn.setAttribute('aria-expanded',exp.classList.contains('active'))}
+</script>
+<script src="../../assets/learn.js"></script>
+<script>if(window.INEMA&&typeof window.INEMA.init==='function')window.INEMA.init();</script>
+</body>
+</html>

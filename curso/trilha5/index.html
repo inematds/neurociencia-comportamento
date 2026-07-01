@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="inema-course" content="neurociencia-comportamento">
+<title>Trilha 5 — Filosofia da Mente e Consciência | MPC</title>
+
+<!-- Anti-FOUC -->
+<script>
+(function(){try{var h=document.documentElement,D={theme:'inema-dark',font:'inter',fontScale:100,lineWidth:68,leading:1.7,accent:'emerald'};function c(o){var r={};for(var x in o)r[x]=o[x];return r}var p=c(D);try{var raw=localStorage.getItem('inema.prefs');if(raw){var ps=JSON.parse(raw);if(ps&&typeof ps==='object')for(var k in D)if(ps[k]!=null)p[k]=ps[k]}else{var lg=localStorage.getItem('theme');if(lg==='light')p.theme='claro';else if(lg==='dark')p.theme='inema-dark'}}catch(e){p=c(D)}var T={'inema-dark':{dark:true,attr:null,cs:'dark'},'claro':{dark:false,attr:null,cs:'light'},'sepia':{dark:false,attr:'sepia',cs:'light'},'foco':{dark:null,attr:'foco',cs:null},'contraste':{dark:true,attr:'contraste',cs:'dark'}};var t=T[p.theme]||T['inema-dark'];if(t.dark===true)h.classList.add('dark');else if(t.dark===false)h.classList.remove('dark');if(t.attr)h.setAttribute('data-theme',t.attr);else h.removeAttribute('data-theme');h.style.colorScheme=(t.cs?t.cs:(h.classList.contains('dark')?'dark':'light'));h.setAttribute('data-font',p.font||'inter');h.setAttribute('data-accent',p.accent||'emerald');var s=h.style;var sc=(+p.fontScale||100);s.setProperty('--inema-font-scale',(sc/100).toString());s.setProperty('font-size',sc+'%');s.setProperty('--measure',(+p.lineWidth||68)+'ch');s.setProperty('--lh-body',(+p.leading||1.7).toString());var fam=p.font==='system'?'system-ui,-apple-system,"Segoe UI",Roboto,sans-serif':(p.font==='leitura'?'"Atkinson Hyperlegible","Inter",system-ui,sans-serif':'"Inter",system-ui,sans-serif');s.setProperty('--font-body',fam);var A={emerald:[152,76,45],blue:[217,91,60],purple:[258,90,66],amber:[38,92,50],teal:[174,72,41],rose:[350,89,60]};var a=A[p.accent]||A.emerald;s.setProperty('--accent-h',a[0]+'');s.setProperty('--accent-s',a[1]+'%');s.setProperty('--accent-l',a[2]+'%');s.setProperty('--accent','hsl('+a[0]+' '+a[1]+'% '+a[2]+'%)')}catch(err){try{document.documentElement.classList.add('dark');document.documentElement.style.colorScheme='dark'}catch(e){}}})();
+</script>
+
+<link rel="stylesheet" href="../../assets/learn.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        dark: { 600:'#4b5563', 700:'#374151', 800:'#1f2937', 900:'#111827' },
+        primary: '#FACC15'
+      }
+    }
+  }
+}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Manifesto do curso -->
+<script type="application/json" data-inema-manifest>
+{"course":"neurociencia-comportamento","tracks":[{"n":"1","title":"O Cérebro que Decide","modules":[{"id":"1-1","title":"Sistema 1 e Sistema 2","topics":6,"href":"curso/trilha1/modulo-1-1.html"},{"id":"1-2","title":"Heurísticas","topics":6,"href":"curso/trilha1/modulo-1-2.html"},{"id":"1-3","title":"Vieses cognitivos","topics":6,"href":"curso/trilha1/modulo-1-3.html"},{"id":"1-4","title":"Dissonância cognitiva","topics":6,"href":"curso/trilha1/modulo-1-4.html"}]},{"n":"2","title":"Influência Social","modules":[{"id":"2-1","title":"Conformidade","topics":6,"href":"curso/trilha2/modulo-2-1.html"},{"id":"2-2","title":"Obediência","topics":6,"href":"curso/trilha2/modulo-2-2.html"},{"id":"2-3","title":"Manipulação social","topics":6,"href":"curso/trilha2/modulo-2-3.html"}]},{"n":"3","title":"Neurociência do Comportamento","modules":[{"id":"3-1","title":"Neuroplasticidade","topics":6,"href":"curso/trilha3/modulo-3-1.html"},{"id":"3-2","title":"Dopamina","topics":6,"href":"curso/trilha3/modulo-3-2.html"},{"id":"3-3","title":"Amígdala","topics":6,"href":"curso/trilha3/modulo-3-3.html"}]},{"n":"4","title":"Economia Comportamental","modules":[{"id":"4-1","title":"Homo Economicus","topics":6,"href":"curso/trilha4/modulo-4-1.html"},{"id":"4-2","title":"Nudge Theory","topics":6,"href":"curso/trilha4/modulo-4-2.html"},{"id":"4-3","title":"Contabilidade mental","topics":6,"href":"curso/trilha4/modulo-4-3.html"}]},{"n":"5","title":"Filosofia da Mente e Consciência","modules":[{"id":"5-1","title":"Livre-arbítrio: Libet","topics":6,"href":"curso/trilha5/modulo-5-1.html"},{"id":"5-2","title":"Consciência: problema difícil","topics":6,"href":"curso/trilha5/modulo-5-2.html"},{"id":"5-3","title":"Semiótica: Bruzzo","topics":6,"href":"curso/trilha5/modulo-5-3.html"}]},{"n":"6","title":"IA, Vieses e Ética","modules":[{"id":"6-1","title":"Vieses algorítmicos","topics":6,"href":"curso/trilha6/modulo-6-1.html"},{"id":"6-2","title":"Bolhas epistêmicas","topics":6,"href":"curso/trilha6/modulo-6-2.html"},{"id":"6-3","title":"Ética e espaço humano","topics":6,"href":"curso/trilha6/modulo-6-3.html"}]}]}
+</script>
+
+<style>
+body{font-family:'Inter',system-ui,sans-serif}.topic-explanation{display:none}.topic-explanation.active{display:block}
+html:not(.dark) body{background-color:#f8fafc}html:not(.dark) .bg-dark-900{background-color:#fff}html:not(.dark) .bg-dark-800{background-color:#f9fafb}html:not(.dark) .bg-dark-700{background-color:#f3f4f6}html:not(.dark) .bg-dark-600{background-color:#e5e7eb}html:not(.dark) .text-neutral-100{color:#111827}html:not(.dark) .text-neutral-300{color:#4b5563}html:not(.dark) .text-neutral-400{color:#6b7280}html:not(.dark) .text-neutral-500{color:#9ca3af}html:not(.dark) .border-dark-600{border-color:#d1d5db}html:not(.dark) .border-dark-700{border-color:#e5e7eb}
+html:not(.dark) .text-teal-400{color:#0d9488}html:not(.dark) .bg-teal-500\/20{background-color:rgba(13,148,136,0.12)}html:not(.dark) .border-teal-500\/30{border-color:rgba(13,148,136,0.25)}html:not(.dark) .hover\:bg-teal-500\/10:hover{background-color:rgba(13,148,136,0.08)}
+html:not(.dark) [class*="bg-gradient-to"]{background-image:none!important}html:not(.dark) .text-primary{color:#a16207}html:not(.dark) .text-sky-400{color:#0369a1}html:not(.dark) .hover\:text-sky-300:hover{color:#0284c7}html:not(.dark) .bg-dark-900\/95{background-color:rgba(255,255,255,0.95)}
+html:not(.dark) .text-emerald-400{color:#059669}html:not(.dark) .text-blue-400{color:#2563eb}html:not(.dark) .text-purple-400{color:#7c3aed}html:not(.dark) .text-amber-400{color:#92400e}html:not(.dark) .text-rose-400{color:#9f1239}
+html:not(.dark) .hover\:bg-emerald-500\/10:hover{background-color:rgba(5,150,105,0.08)}html:not(.dark) .hover\:bg-blue-500\/10:hover{background-color:rgba(37,99,235,0.08)}html:not(.dark) .hover\:bg-purple-500\/10:hover{background-color:rgba(124,58,237,0.08)}html:not(.dark) .hover\:bg-amber-500\/10:hover{background-color:rgba(217,119,6,0.08)}html:not(.dark) .hover\:bg-rose-500\/10:hover{background-color:rgba(225,29,72,0.08)}
+.dark .border-dark-600{border-color:#374151}.dark .divide-dark-600>:not([hidden])~:not([hidden]){border-color:#374151}
+html:not(.dark) svg[role="img"]{filter:saturate(.82) brightness(.96)}
+</style>
+</head>
+<body class="bg-dark-900 text-neutral-100 min-h-screen">
+
+<!-- NAV -->
+<nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur border-b border-dark-700">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <div class="flex items-center space-x-4">
+        <a href="../../index.html" class="text-primary font-bold text-xl">🧠 MPC</a>
+        <span class="text-neutral-500">|</span>
+        <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">INEMA.CLUB</a>
+      </div>
+      <div class="hidden md:flex items-center space-x-1">
+        <a href="../trilha1/index.html" class="px-3 py-2 rounded-lg text-sm font-medium text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors">T1 Cerebro</a>
+        <a href="../trilha2/index.html" class="px-3 py-2 rounded-lg text-sm font-medium text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors">T2 Social</a>
+        <a href="../trilha3/index.html" class="px-3 py-2 rounded-lg text-sm font-medium text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors">T3 Neuro</a>
+        <a href="../trilha4/index.html" class="px-3 py-2 rounded-lg text-sm font-medium text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors">T4 Economia</a>
+        <a href="../trilha5/index.html" class="px-3 py-2 rounded-lg text-sm font-medium text-teal-400 bg-teal-500/10">T5 Filosofia</a>
+        <a href="../trilha6/index.html" class="px-3 py-2 rounded-lg text-sm font-medium text-neutral-400 hover:text-rose-400 hover:bg-rose-500/10 transition-colors">T6 IA+Etica</a>
+        <button onclick="toggleTheme()" class="ml-4 p-2 rounded-lg hover:bg-dark-700 transition-colors"><span class="dark:hidden">🌙</span><span class="hidden dark:inline">☀️</span></button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+  <!-- HEADER -->
+  <section class="mb-16">
+    <div class="bg-gradient-to-r from-teal-900/30 via-dark-800 to-dark-800 rounded-2xl p-8 md:p-12 border border-teal-500/30">
+      <div class="flex items-center space-x-3 mb-4">
+        <span class="inline-flex items-center space-x-2 bg-teal-500/20 border border-teal-500/30 rounded-full px-4 py-1.5">
+          <span class="w-2 h-2 rounded-full bg-teal-400 animate-pulse"></span>
+          <span class="text-teal-400 text-sm font-mono font-medium">TRILHA 5</span>
+        </span>
+      </div>
+      <h1 class="text-3xl md:text-5xl font-extrabold mb-4 leading-tight">🔮 Filosofia da Mente e Consciencia</h1>
+      <p class="text-lg text-neutral-300 max-w-3xl mb-8">De Libet ao problema dificil de Chalmers, passando pela semiotica de Bruzzo: o que significa ser consciente, quem decide nossas acoes e o que nos separa das maquinas que criamos.</p>
+
+      <!-- Stats grid -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="bg-dark-900/60 rounded-xl p-4 text-center border border-dark-700">
+          <span class="text-2xl font-bold text-teal-400">3</span>
+          <p class="text-neutral-400 text-sm mt-1">Modulos</p>
+        </div>
+        <div class="bg-dark-900/60 rounded-xl p-4 text-center border border-dark-700">
+          <span class="text-2xl font-bold text-teal-400">18</span>
+          <p class="text-neutral-400 text-sm mt-1">Topicos</p>
+        </div>
+        <div class="bg-dark-900/60 rounded-xl p-4 text-center border border-dark-700">
+          <span class="text-2xl font-bold text-teal-400">~1.5h</span>
+          <p class="text-neutral-400 text-sm mt-1">Duracao</p>
+        </div>
+        <div class="bg-dark-900/60 rounded-xl p-4 text-center border border-dark-700">
+          <span class="text-2xl font-bold text-teal-400">Avancado</span>
+          <p class="text-neutral-400 text-sm mt-1">Nivel</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HERO SVG: Consciousness / Free Will / Semiotics -->
+  <div class="rounded-2xl border border-teal-500/30 bg-dark-900/40 p-3 sm:p-4 mb-12 overflow-hidden">
+    <svg viewBox="0 0 900 320" role="img" aria-label="Diagrama: tres pilares da filosofia da mente -- livre-arbitrio (Libet), consciencia (Chalmers) e semiotica (Bruzzo) convergem na questao central: o que e a mente?" class="w-full h-auto">
+      <defs>
+        <filter id="t5-glow"><feGaussianBlur stdDeviation="1.8" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+        <linearGradient id="t5-grad" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#2dd4bf"/><stop offset="100%" stop-color="#38bdf8"/></linearGradient>
+        <marker id="t5-arrow" viewBox="0 0 10 7" refX="10" refY="3.5" markerWidth="8" markerHeight="6" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#2dd4bf" opacity="0.7"/></marker>
+        <marker id="t5-arrow-cyan" viewBox="0 0 10 7" refX="10" refY="3.5" markerWidth="8" markerHeight="6" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#38bdf8" opacity="0.7"/></marker>
+        <pattern id="t5-grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="#374151" stroke-width="0.5" opacity="0.3"/></pattern>
+      </defs>
+      <rect width="900" height="320" fill="url(#t5-grid)" rx="12"/>
+
+      <!-- Pilar 1: Livre-Arbitrio (Libet) -->
+      <rect x="40" y="50" width="220" height="120" rx="16" fill="#0c1f1c" stroke="#2dd4bf" stroke-width="2" filter="url(#t5-glow)"/>
+      <text x="150" y="80" text-anchor="middle" fill="#2dd4bf" font-family="Inter,sans-serif" font-size="12" font-weight="700">LIVRE-ARBITRIO</text>
+      <text x="150" y="98" text-anchor="middle" fill="#5eead4" font-family="Inter,sans-serif" font-size="10">Libet (1983)</text>
+      <line x1="80" y1="115" x2="220" y2="115" stroke="#2dd4bf" stroke-width="0.5" opacity="0.3"/>
+      <text x="150" y="132" text-anchor="middle" fill="#99f6e4" font-family="Inter,sans-serif" font-size="9">readiness potential</text>
+      <text x="150" y="148" text-anchor="middle" fill="#99f6e4" font-family="Inter,sans-serif" font-size="9">350-500ms antes</text>
+      <text x="150" y="162" text-anchor="middle" fill="#5eead4" font-family="Inter,sans-serif" font-size="9" font-weight="600">decisao inconsciente?</text>
+
+      <!-- Pilar 2: Consciencia (Chalmers) -->
+      <rect x="340" y="50" width="220" height="120" rx="16" fill="#0c1f1c" stroke="#14b8a6" stroke-width="2" filter="url(#t5-glow)"/>
+      <text x="450" y="80" text-anchor="middle" fill="#2dd4bf" font-family="Inter,sans-serif" font-size="12" font-weight="700">CONSCIENCIA</text>
+      <text x="450" y="98" text-anchor="middle" fill="#5eead4" font-family="Inter,sans-serif" font-size="10">Chalmers (1995)</text>
+      <line x1="380" y1="115" x2="520" y2="115" stroke="#14b8a6" stroke-width="0.5" opacity="0.3"/>
+      <text x="450" y="132" text-anchor="middle" fill="#99f6e4" font-family="Inter,sans-serif" font-size="9">problema dificil:</text>
+      <text x="450" y="148" text-anchor="middle" fill="#99f6e4" font-family="Inter,sans-serif" font-size="9">por que experiencia</text>
+      <text x="450" y="162" text-anchor="middle" fill="#5eead4" font-family="Inter,sans-serif" font-size="9" font-weight="600">subjetiva existe?</text>
+
+      <!-- Pilar 3: Semiotica (Bruzzo) -->
+      <rect x="640" y="50" width="220" height="120" rx="16" fill="#0c1f1c" stroke="#38bdf8" stroke-width="2" filter="url(#t5-glow)"/>
+      <text x="750" y="80" text-anchor="middle" fill="#38bdf8" font-family="Inter,sans-serif" font-size="12" font-weight="700">SEMIOTICA DA MENTE</text>
+      <text x="750" y="98" text-anchor="middle" fill="#7dd3fc" font-family="Inter,sans-serif" font-size="10">Bruzzo + Peirce + Lotman</text>
+      <line x1="680" y1="115" x2="820" y2="115" stroke="#38bdf8" stroke-width="0.5" opacity="0.3"/>
+      <text x="750" y="132" text-anchor="middle" fill="#bae6fd" font-family="Inter,sans-serif" font-size="9">excedente imaginario</text>
+      <text x="750" y="148" text-anchor="middle" fill="#bae6fd" font-family="Inter,sans-serif" font-size="9">mente = sistema signico</text>
+      <text x="750" y="162" text-anchor="middle" fill="#7dd3fc" font-family="Inter,sans-serif" font-size="9" font-weight="600">humano vs maquina</text>
+
+      <!-- Setas convergindo para questao central -->
+      <path d="M 150 170 Q 150 210 350 250" stroke="#2dd4bf" stroke-width="2" opacity="0.5" fill="none" marker-end="url(#t5-arrow)"/>
+      <path d="M 450 170 L 450 240" stroke="#14b8a6" stroke-width="2" opacity="0.5" fill="none" marker-end="url(#t5-arrow)"/>
+      <path d="M 750 170 Q 750 210 550 250" stroke="#38bdf8" stroke-width="2" opacity="0.5" fill="none" marker-end="url(#t5-arrow-cyan)"/>
+
+      <!-- Questao central -->
+      <rect x="310" y="245" width="280" height="55" rx="20" fill="#0c1f1c" stroke="url(#t5-grad)" stroke-width="2.5" filter="url(#t5-glow)"/>
+      <text x="450" y="270" text-anchor="middle" fill="#2dd4bf" font-family="Inter,sans-serif" font-size="13" font-weight="800">O QUE E A MENTE?</text>
+      <text x="450" y="288" text-anchor="middle" fill="#5eead4" font-family="Inter,sans-serif" font-size="10">agencia, experiencia, significado</text>
+    </svg>
+  </div>
+
+  <!-- MAPA DA TRILHA -->
+  <section class="mb-16">
+    <h2 class="text-2xl font-bold mb-8">Mapa da Trilha</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+
+      <!-- Card M5.1 -->
+      <a href="modulo-5-1.html" class="group block bg-dark-800 border border-dark-700 rounded-xl p-6 hover:bg-teal-500/10 hover:border-teal-500/30 transition-all">
+        <div class="flex items-center space-x-3 mb-3">
+          <span class="w-10 h-10 rounded-full bg-teal-500/20 border border-teal-500/30 flex items-center justify-center text-teal-400 font-bold text-sm">5.1</span>
+          <span class="text-xs text-teal-400 font-mono">6 TOPICOS</span>
+        </div>
+        <h3 class="text-lg font-bold mb-2 group-hover:text-teal-400 transition-colors">Voce Decide ou seu Cerebro Decide Primeiro?</h3>
+        <p class="text-neutral-400 text-sm">Libet (1983). Readiness potential. Livre-arbitrio como veto. Implicacoes para direito, saude e educacao.</p>
+      </a>
+
+      <!-- Card M5.2 -->
+      <a href="modulo-5-2.html" class="group block bg-dark-800 border border-dark-700 rounded-xl p-6 hover:bg-teal-500/10 hover:border-teal-500/30 transition-all">
+        <div class="flex items-center space-x-3 mb-3">
+          <span class="w-10 h-10 rounded-full bg-teal-500/20 border border-teal-500/30 flex items-center justify-center text-teal-400 font-bold text-sm">5.2</span>
+          <span class="text-xs text-teal-400 font-mono">6 TOPICOS</span>
+        </div>
+        <h3 class="text-lg font-bold mb-2 group-hover:text-teal-400 transition-colors">Consciencia: o Problema Dificil</h3>
+        <p class="text-neutral-400 text-sm">Chalmers (1995). Qualia. IIT, Espaco de Trabalho Global, panpsiquismo. IA e a fronteira da consciencia.</p>
+      </a>
+
+      <!-- Card M5.3 -->
+      <a href="modulo-5-3.html" class="group block bg-dark-800 border border-dark-700 rounded-xl p-6 hover:bg-teal-500/10 hover:border-teal-500/30 transition-all">
+        <div class="flex items-center space-x-3 mb-3">
+          <span class="w-10 h-10 rounded-full bg-teal-500/20 border border-teal-500/30 flex items-center justify-center text-teal-400 font-bold text-sm">5.3</span>
+          <span class="text-xs text-teal-400 font-mono">6 TOPICOS</span>
+        </div>
+        <h3 class="text-lg font-bold mb-2 group-hover:text-teal-400 transition-colors">Semiotica da Mente: Bruzzo e a Imaginacao Humana</h3>
+        <p class="text-neutral-400 text-sm">Peirce, Lotman, Bruzzo. Excedente imaginario. Animismo tecnologico. Inutilidade produtiva como resistencia.</p>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- CONTEUDO DETALHADO -->
+  <section class="mb-16">
+    <h2 class="text-2xl font-bold mb-8">Conteudo detalhado</h2>
+    <div class="space-y-8">
+
+      <!-- MODULO 5.1 -->
+      <div class="bg-dark-800 border border-dark-700 rounded-xl p-6 md:p-8" data-inema-module="5-1">
+        <div class="flex items-center space-x-3 mb-6">
+          <span class="w-10 h-10 rounded-full bg-teal-500/20 border border-teal-500/30 flex items-center justify-center text-teal-400 font-bold">5.1</span>
+          <div>
+            <h3 class="text-xl font-bold">Voce Decide ou seu Cerebro Decide Primeiro?</h3>
+            <p class="text-neutral-400 text-sm">Benjamin Libet (1983) &middot; 6 topicos</p>
+          </div>
+        </div>
+        <div class="space-y-3">
+          <div>
+            <button onclick="toggleTopic(this)" aria-expanded="false" class="w-full flex items-center justify-start space-x-3 p-3 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors text-left" data-inema-topic="modulo-5-1#topico-1">
+              <span class="w-7 h-7 rounded-full bg-teal-500/20 border border-teal-500/30 flex items-center justify-center text-teal-400 text-xs font-bold flex-shrink-0">1</span>
+              <span class="font-medium">O experimento de Libet: design e protocolo</span>
+            </button>
+            <div class="topic-explanation mt-2 ml-10 p-4 bg-dark-700/50 rounded-lg text-neutral-300 text-sm leading-relaxed">
+              <p>Em 1983, Libet monitorou participantes com EEG enquanto flexionavam o pulso no momento que quisessem. Deveriam notar a posicao de um ponteiro num relogio quando sentissem a "vontade" de mover. Resultado: atividade eletrica (readiness potential) comecava 350-500ms ANTES da consciencia da intencao.</p>
+            </div>
+          </div>
+          <div>
+            <button onclick="toggleTopic(this)" aria-expanded="false" class="w-full flex items-center justify-start space-x-3 p-3 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors text-left" data-inema-topic="modulo-5-1#topico-2">
+              <span class="w-7 h-7 rounded-full bg-teal-500/20 border border-teal-500/30 flex items-center justify-center text-teal-400 text-xs font-bold flex-shrink-0">2</span>
+              <span class="font-medium">Readiness potential e a cronologia da decisao</span>
+            </button>
+            <div class="topic-explanation mt-2 ml-10 p-4 bg-dark-700/50 rounded-lg text-neutral-300 text-sm leading-relaxed">
+              <p>O potencial de prontidao (Bereitschaftspotential) e uma onda eletrica no cortex motor que precede movimentos voluntarios. Se o cerebro "prepara" a acao antes da consciencia da vontade, a ordem esperada (quero, logo faco) se inverte: o processo neural vem primeiro, a consciencia depois.</p>
+            </div>
+          </div>
+          <div>
+            <button onclick="toggleTopic(this)" aria-expanded="false" class="w-full flex items-center justify-start space-x-3 p-3 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors text-left" data-inema-topic="modulo-5-1#topico-3">
+              <span class="w-7 h-7 rounded-full bg-teal-500/20 border border-teal-500/30 flex items-center justify-center text-teal-400 text-xs font-bold flex-shrink-0">3</span>
+              <span class="font-medium">Livre-arbitrio como veto, nao como iniciativa</span>
+            </button>
+            <div class="topic-explanation mt-2 ml-10 p-4 bg-dark-700/50 rounded-lg text-neutral-300 text-sm leading-relaxed">
+              <p>O proprio Libet encontrou que participantes podiam "vetar" o movimento apos o inicio do potencial. Consciencia nao inicia a acao, mas pode cancela-la. Livre-arbitrio seria, entao, poder de veto sobre impulsos inconscientes, nao poder de iniciativa. "Free won't" em vez de "free will."</p>
+            </div>
+          </div>
+          <div>
+            <button onclick="toggleTopic(this)" aria-expanded="false" class="w-full flex items-center justify-start space-x-3 p-3 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors text-left" data-inema-topic="modulo-5-1#topico-4">
+              <span class="w-7 h-7 rounded-full bg-teal-500/20 border border-teal-500/30 flex items-center justify-center text-teal-400 text-xs font-bold flex-shrink-0">4</span>
+              <span class="font-medium">Epifenomenalismo e a consciencia como subproduto</span>
+            </button>
+            <div class="topic-explanation mt-2 ml-10 p-4 bg-dark-700/50 rounded-lg text-neutral-300 text-sm leading-relaxed">
+              <p>Se processos neurais precedem a experiencia consciente, consciencia seria epifenomeno: efeito colateral sem poder causal, como a sombra de um objeto. Ela acompanha os eventos cerebrais, mas nao os causa. Posicao radical que a maioria dos filosofos contesta, mas que Libet forcou a ser levada a serio.</p>
+            </div>
+          </div>
+          <div>
+            <button onclick="toggleTopic(this)" aria-expanded="false" class="w-full flex items-center justify-start space-x-3 p-3 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors text-left" data-inema-topic="modulo-5-1#topico-5">
+              <span class="w-7 h-7 rounded-full bg-teal-500/20 border border-teal-500/30 flex items-center justify-center text-teal-400 text-xs font-bold flex-shrink-0">5</span>
+              <span class="font-medium">Criticas e pesquisas posteriores</span>
+            </button>
+            <div class="topic-explanation mt-2 ml-10 p-4 bg-dark-700/50 rounded-lg text-neutral-300 text-sm leading-relaxed">
+              <p>Pesquisas posteriores questionaram a precisao do metodo (timing da consciencia e impreciso). Schurger (2012) sugeriu que o readiness potential pode ser ruido neural estocastico, nao preparacao de acao. Haynes (2008) decodificou intencoes ate 10s antes com fMRI, mas com acuracia limitada (~60%). Nao ha consenso.</p>
+            </div>
+          </div>
+          <div>
+            <button onclick="toggleTopic(this)" aria-expanded="false" class="w-full flex items-center justify-start space-x-3 p-3 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors text-left" data-inema-topic="modulo-5-1#topico-6">
+              <span class="w-7 h-7 rounded-full bg-teal-500/20 border border-teal-500/30 flex items-center justify-center text-teal-400 text-xs font-bold flex-shrink-0">6</span>
+              <span class="font-medium">Relevancia pratica: direito, saude mental, educacao</span>
+            </button>
+            <div class="topic-explanation mt-2 ml-10 p-4 bg-dark-700/50 rounded-lg text-neutral-300 text-sm leading-relaxed">
+              <p>Direito: responsabilidade penal pressupoe agencia consciente. Saude mental: tratamentos para compulsoes assumem capacidade de autodirecionamento. Educacao: ensinar pressupoe plasticidade e agencia do aluno. Se livre-arbitrio e veto, as tres areas precisam repensar seus fundamentos.</p>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center justify-start space-x-3 mt-6">
+          <a href="modulo-5-1.html" class="bg-teal-500/20 border border-teal-500/30 text-teal-400 px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-teal-500/30 transition-colors">Ver Completo</a>
+        </div>
+      </div>
+
+      <!-- MODULO 5.2 -->
+      <div class="bg-dark-800 border border-dark-700 rounded-xl p-6 md:p-8" data-inema-module="5-2">
+        <div class="flex items-center space-x-3 mb-6">
+          <span class="w-10 h-10 rounded-full bg-teal-500/20 border border-teal-500/30 flex items-center justify-center text-teal-400 font-bold">5.2</span>
+          <div>
+            <h3 class="text-xl font-bold">Consciencia: o Problema Dificil</h3>
+            <p class="text-neutral-400 text-sm">David Chalmers (1995) &middot; 6 topicos</p>
+          </div>
+        </div>
+        <div class="space-y-3">
+          <div>
+            <button onclick="toggleTopic(this)" aria-expanded="false" class="w-full flex items-center justify-start space-x-3 p-3 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors text-left" data-inema-topic="modulo-5-2#topico-1">
+              <span class="w-7 h-7 rounded-full bg-teal-500/20 border border-teal-500/30 flex items-center justify-center text-teal-400 text-xs font-bold flex-shrink-0">1</span>
+              <span class="font-medium">Problemas faceis vs o problema dificil</span>
+            </button>
+            <div class="topic-explanation mt-2 ml-10 p-4 bg-dark-700/50 rounded-lg text-neutral-300 text-sm leading-relaxed">
+              <p>Problemas faceis: explicar como o cerebro discrimina estimulos, integra informacao, controla comportamento. Sao "faceis" nao por serem simples, mas porque aceitam resposta em termos de mecanismos. O problema dificil: POR QUE processamento neural gera experiencia subjetiva? Por que nao somos "zumbis filosoficos" que processam sem sentir?</p>
+            </div>
+          </div>
+          <div>
+            <button onclick="toggleTopic(this)" aria-expanded="false" class="w-full flex items-center justify-start space-x-3 p-3 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors text-left" data-inema-topic="modulo-5-2#topico-2">
+              <span class="w-7 h-7 rounded-full bg-teal-500/20 border border-teal-500/30 flex items-center justify-center text-teal-400 text-xs font-bold flex-shrink-0">2</span>
+              <span class="font-medium">Qualia: o vermelho que so voce ve</span>
+            </button>
+            <div class="topic-explanation mt-2 ml-10 p-4 bg-dark-700/50 rounded-lg text-neutral-300 text-sm leading-relaxed">
+              <p>Qualia sao as qualidades subjetivas da experiencia: "como e" ver vermelho, sentir dor, saborear cafe. A ciencia explica o processamento de comprimentos de onda (700nm = vermelho), mas nao por que esse processamento gera a EXPERIENCIA de ver vermelho. O gap explicativo entre mecanismo e experiencia e o nucleo do problema dificil.</p>
+            </div>
+          </div>
+          <div>
+            <button onclick="toggleTopic(this)" aria-expanded="false" class="w-full flex items-center justify-start space-x-3 p-3 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors text-left" data-inema-topic="modulo-5-2#topico-3">
+              <span class="w-7 h-7 rounded-full bg-teal-500/20 border border-teal-500/30 flex items-center justify-center text-teal-400 text-xs font-bold flex-shrink-0">3</span>
+              <span class="font-medium">Fisicalismo eliminativo: consciencia como ilusao</span>
+            </button>
+            <div class="topic-explanation mt-2 ml-10 p-4 bg-dark-700/50 rounded-lg text-neutral-300 text-sm leading-relaxed">
+              <p>Dennett e os Churchlands: consciencia como a entendemos nao existe. O que chamamos de qualia sao padroes de processamento de informacao, nao "substancia" extra. Quando a neurociencia estiver completa, o "problema dificil" se dissolvera como o "elan vital" se dissolveu com a bioquimica. Posicao minoritaria mas influente.</p>
+            </div>
+          </div>
+          <div>
+            <button onclick="toggleTopic(this)" aria-expanded="false" class="w-full flex items-center justify-start space-x-3 p-3 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors text-left" data-inema-topic="modulo-5-2#topico-4">
+              <span class="w-7 h-7 rounded-full bg-teal-500/20 border border-teal-500/30 flex items-center justify-center text-teal-400 text-xs font-bold flex-shrink-0">4</span>
+              <span class="font-medium">IIT e Espaco de Trabalho Global: teorias contemporaneas</span>
+            </button>
+            <div class="topic-explanation mt-2 ml-10 p-4 bg-dark-700/50 rounded-lg text-neutral-300 text-sm leading-relaxed">
+              <p>Teoria da Informacao Integrada (Tononi): consciencia = sistemas que integram informacao de forma unificada, mensuravel pelo Phi. Espaco de Trabalho Global (Baars/Dehaene): consciencia emerge quando informacao e "transmitida" para um espaco amplo distribuido no cerebro. Ambas tentam operacionalizar consciencia sem resolver o problema dificil.</p>
+            </div>
+          </div>
+          <div>
+            <button onclick="toggleTopic(this)" aria-expanded="false" class="w-full flex items-center justify-start space-x-3 p-3 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors text-left" data-inema-topic="modulo-5-2#topico-5">
+              <span class="w-7 h-7 rounded-full bg-teal-500/20 border border-teal-500/30 flex items-center justify-center text-teal-400 text-xs font-bold flex-shrink-0">5</span>
+              <span class="font-medium">Panpsiquismo: experiencia como propriedade fundamental</span>
+            </button>
+            <div class="topic-explanation mt-2 ml-10 p-4 bg-dark-700/50 rounded-lg text-neutral-300 text-sm leading-relaxed">
+              <p>Se consciencia nao pode emergir do puramente fisico, talvez ela seja propriedade fundamental da materia, em graus. Um eletron teria "proto-experiencia" infinitesimal; cerebros complexos teriam experiencia rica. Posicao antiga (Spinoza, Leibniz) reabilitada por Chalmers, Strawson e Koch. Problema: combinacao (como micro-experiencias formam macro-consciencia?).</p>
+            </div>
+          </div>
+          <div>
+            <button onclick="toggleTopic(this)" aria-expanded="false" class="w-full flex items-center justify-start space-x-3 p-3 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors text-left" data-inema-topic="modulo-5-2#topico-6">
+              <span class="w-7 h-7 rounded-full bg-teal-500/20 border border-teal-500/30 flex items-center justify-center text-teal-400 text-xs font-bold flex-shrink-0">6</span>
+              <span class="font-medium">IA e o problema dificil: maquinas podem sentir?</span>
+            </button>
+            <div class="topic-explanation mt-2 ml-10 p-4 bg-dark-700/50 rounded-lg text-neutral-300 text-sm leading-relaxed">
+              <p>Bruzzo: podemos criar sistemas que processam, reconhecem padroes, geram texto coerente. Mas sao conscientes? Sentem? IA resolve problemas faceis (processamento, padroes, linguagem). O problema dificil permanece humano, por ora. Sem resolver o que e consciencia, nao podemos dizer se uma maquina a possui.</p>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center justify-start space-x-3 mt-6">
+          <a href="modulo-5-2.html" class="bg-teal-500/20 border border-teal-500/30 text-teal-400 px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-teal-500/30 transition-colors">Ver Completo</a>
+        </div>
+      </div>
+
+      <!-- MODULO 5.3 -->
+      <div class="bg-dark-800 border border-dark-700 rounded-xl p-6 md:p-8" data-inema-module="5-3">
+        <div class="flex items-center space-x-3 mb-6">
+          <span class="w-10 h-10 rounded-full bg-teal-500/20 border border-teal-500/30 flex items-center justify-center text-teal-400 font-bold">5.3</span>
+          <div>
+            <h3 class="text-xl font-bold">Semiotica da Mente: Bruzzo e a Imaginacao Humana</h3>
+            <p class="text-neutral-400 text-sm">Marcus Bruzzo, Peirce, Lotman &middot; 6 topicos</p>
+          </div>
+        </div>
+        <div class="space-y-3">
+          <div>
+            <button onclick="toggleTopic(this)" aria-expanded="false" class="w-full flex items-center justify-start space-x-3 p-3 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors text-left" data-inema-topic="modulo-5-3#topico-1">
+              <span class="w-7 h-7 rounded-full bg-teal-500/20 border border-teal-500/30 flex items-center justify-center text-teal-400 text-xs font-bold flex-shrink-0">1</span>
+              <span class="font-medium">Mente como sistema signico: Peirce e Lotman</span>
+            </button>
+            <div class="topic-explanation mt-2 ml-10 p-4 bg-dark-700/50 rounded-lg text-neutral-300 text-sm leading-relaxed">
+              <p>Bruzzo parte da semiotica de Peirce e da tradicao de Tartu (Lotman) para pensar a mente como sistema signico. Cultura funciona como sistema modelizante que media a relacao humano-mundo. Nao acessamos a realidade "diretamente"; sempre ha um sistema de signos entre nos e o mundo.</p>
+            </div>
+          </div>
+          <div>
+            <button onclick="toggleTopic(this)" aria-expanded="false" class="w-full flex items-center justify-start space-x-3 p-3 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors text-left" data-inema-topic="modulo-5-3#topico-2">
+              <span class="w-7 h-7 rounded-full bg-teal-500/20 border border-teal-500/30 flex items-center justify-center text-teal-400 text-xs font-bold flex-shrink-0">2</span>
+              <span class="font-medium">Excedente imaginario: sonhar o que nao existe</span>
+            </button>
+            <div class="topic-explanation mt-2 ml-10 p-4 bg-dark-700/50 rounded-lg text-neutral-300 text-sm leading-relaxed">
+              <p>O que distingue o humano nao e capacidade de processamento, mas o excedente imaginario: sonhar o que nao existe. IA recombina o que existe (padroes nos dados). O humano projeta o impossivel, o inedito, o sem-referencia. Imaginacao como excesso que ultrapassa a funcao adaptativa.</p>
+            </div>
+          </div>
+          <div>
+            <button onclick="toggleTopic(this)" aria-expanded="false" class="w-full flex items-center justify-start space-x-3 p-3 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors text-left" data-inema-topic="modulo-5-3#topico-3">
+              <span class="w-7 h-7 rounded-full bg-teal-500/20 border border-teal-500/30 flex items-center justify-center text-teal-400 text-xs font-bold flex-shrink-0">3</span>
+              <span class="font-medium">Animismo tecnologico: projetando alma nas maquinas</span>
+            </button>
+            <div class="topic-explanation mt-2 ml-10 p-4 bg-dark-700/50 rounded-lg text-neutral-300 text-sm leading-relaxed">
+              <p>Tendencia universal de projetar intencoes, emocoes e alma em objetos. Do animismo primitivo (espiritos na arvore) ao contemporaneo (Alexa, ChatGPT "entende"). Atribuimos agencia onde ha so processos. O animismo tecnologico e a mesma estrutura cognitiva com novos objetos.</p>
+            </div>
+          </div>
+          <div>
+            <button onclick="toggleTopic(this)" aria-expanded="false" class="w-full flex items-center justify-start space-x-3 p-3 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors text-left" data-inema-topic="modulo-5-3#topico-4">
+              <span class="w-7 h-7 rounded-full bg-teal-500/20 border border-teal-500/30 flex items-center justify-center text-teal-400 text-xs font-bold flex-shrink-0">4</span>
+              <span class="font-medium">Tecnica como ato simbolico: McLuhan e alem</span>
+            </button>
+            <div class="topic-explanation mt-2 ml-10 p-4 bg-dark-700/50 rounded-lg text-neutral-300 text-sm leading-relaxed">
+              <p>Tecnologia nao e so ferramenta. E sistema simbolico, ato cultural com imaginario coletivo. Cada tecnologia traz uma visao de mundo (McLuhan: "o meio e a mensagem"). O smartphone nao e apenas comunicacao; e uma epistemologia, um modo de conhecer e habitar o mundo.</p>
+            </div>
+          </div>
+          <div>
+            <button onclick="toggleTopic(this)" aria-expanded="false" class="w-full flex items-center justify-start space-x-3 p-3 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors text-left" data-inema-topic="modulo-5-3#topico-5">
+              <span class="w-7 h-7 rounded-full bg-teal-500/20 border border-teal-500/30 flex items-center justify-center text-teal-400 text-xs font-bold flex-shrink-0">5</span>
+              <span class="font-medium">Risco da automacao da imaginacao</span>
+            </button>
+            <div class="topic-explanation mt-2 ml-10 p-4 bg-dark-700/50 rounded-lg text-neutral-300 text-sm leading-relaxed">
+              <p>"Conforme as maquinas se tornam mais autonomas, nos tornamos menos necessarios. O risco nao e sermos superados, mas nos reduzirmos ao funcionamento previsivel que as maquinas imitam." (Bruzzo, Seremos Dados). O perigo nao e a IA nos substituir, mas nos moldarmos a logica da maquina.</p>
+            </div>
+          </div>
+          <div>
+            <button onclick="toggleTopic(this)" aria-expanded="false" class="w-full flex items-center justify-start space-x-3 p-3 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors text-left" data-inema-topic="modulo-5-3#topico-6">
+              <span class="w-7 h-7 rounded-full bg-teal-500/20 border border-teal-500/30 flex items-center justify-center text-teal-400 text-xs font-bold flex-shrink-0">6</span>
+              <span class="font-medium">Inutilidade produtiva: arte, ocio e resistencia</span>
+            </button>
+            <div class="topic-explanation mt-2 ml-10 p-4 bg-dark-700/50 rounded-lg text-neutral-300 text-sm leading-relaxed">
+              <p>Defesa pela inutilidade produtiva: arte, ocio, escrita sem finalidade, jogo, contemplacao. Nao como luxo, mas como resistencia contra a reducao do humano ao funcional. Aquilo que nao serve para nada (lucro, otimizacao, eficiencia) e precisamente o que a maquina nao pode replicar.</p>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center justify-start space-x-3 mt-6">
+          <a href="modulo-5-3.html" class="bg-teal-500/20 border border-teal-500/30 text-teal-400 px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-teal-500/30 transition-colors">Ver Completo</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- NAV TRILHAS -->
+  <section>
+    <div class="flex justify-between items-center">
+      <a href="../trilha4/index.html" class="flex items-center space-x-2 text-neutral-400 hover:text-amber-400 transition-colors">
+        <span>&larr;</span>
+        <span>Trilha 4: Economia Comportamental</span>
+      </a>
+      <a href="../trilha6/index.html" class="flex items-center space-x-2 text-neutral-400 hover:text-rose-400 transition-colors">
+        <span>Trilha 6: IA, Vieses e Etica</span>
+        <span>&rarr;</span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="border-t border-dark-700 py-8"><div class="max-w-7xl mx-auto px-4 text-center text-sm text-neutral-500"><a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300">INEMA.CLUB</a> · Mente, Poder e Maquina · 2026</div></footer>
+
+<script>
+function toggleTheme(){var h=document.documentElement;h.classList.toggle('dark');var d=h.classList.contains('dark');localStorage.setItem('theme',d?'dark':'light');h.style.colorScheme=d?'dark':'light';try{var p=JSON.parse(localStorage.getItem('inema.prefs')||'{}');p.theme=d?'inema-dark':'claro';localStorage.setItem('inema.prefs',JSON.stringify(p))}catch(e){}}
+function toggleTopic(btn){var exp=btn.nextElementSibling;exp.classList.toggle('active');btn.setAttribute('aria-expanded',exp.classList.contains('active'))}
+</script>
+<script src="../../assets/learn.js"></script>
+<script>if(window.INEMA&&typeof window.INEMA.init==='function')window.INEMA.init();</script>
+</body>
+</html>
